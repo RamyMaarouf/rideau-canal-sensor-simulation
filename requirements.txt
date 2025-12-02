@@ -1,0 +1,3 @@
+# requirements.txt
+azure-iot-device
+paho-mqtt
