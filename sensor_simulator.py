@@ -6,7 +6,7 @@ import random
 from datetime import datetime, timezone
 from azure.iot.device import IoTHubDeviceClient, Message
 
-# --- 🛑 Configuration (FINAL CONSOLIDATED SETUP) ---
+# --- Configuration (FINAL CONSOLIDATED SETUP) ---
 # Using the latest confirmed keys from your input
 DEVICE_CONFIGS = {
     "dows-lake": {
