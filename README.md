@@ -1,24 +1,29 @@
 # Rideau Canal Sensor Simulation
 
-This repository contains the Python script used to simulate IoT devices sending environmental data (Ice Thickness and Surface Temperature) to Azure IoT Hub.
+## Overview
+This repository hosts the Python-based simulator for the Rideau Canal Ice Monitoring Project. It mimics the behavior of physical IoT devices sending real-time environmental telemetry.
+
+* **What the simulator does:** Generates semi-random, location-based readings for ice thickness and temperature. It runs continuously, sending data packets to the cloud every few seconds.
+* **Technologies used:** **Python 3.x**, **Azure IoT SDK for Python** (`azure-iot-device`).
+
+---
 
 ## Prerequisites
+* Python 3.x installed.
+* A registered device in Azure IoT Hub (requires the **Device Connection String**).
 
-1.  Install dependencies:
+### Installation
+1.  Clone this repository.
+2.  Install dependencies using the `requirements.txt` file:
     ```bash
     pip install -r requirements.txt
     ```
 
-## Setup and Usage
+### Configuration
+1.  Create a file named **`.env`** in the root directory.
+2.  Paste the format from `.env.example` and replace the placeholder with your actual **IoT Hub Device Connection String**.
 
-1.  **Get Connection String:** Register a device in your Azure IoT Hub (e.g., `dows-lake`) and copy its **Device Connection String**.
-2.  **Configure .env:** Create a file named `.env` in this directory and paste your connection string, referencing the format in `.env.example`.
-3.  **Run the Script:** Execute the main simulation script. It will run indefinitely, sending data every few seconds.
-
-    ```bash
-    python sensor_simulator.py
-    ```
-
-## How it Works
-
-The script reads the device connection string from the `.env` file and uses the `azure-iot-device` SDK to connect and send JSON messages to the cloud.
+## Usage
+To start the simulation, execute the main script:
+```bash
+python sensor_simulator.py
