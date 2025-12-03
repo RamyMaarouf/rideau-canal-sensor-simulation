@@ -1,4 +1,4 @@
-# 🧊 Rideau Canal Sensor Simulation
+# Rideau Canal Sensor Simulation
 
 This repository contains the Python script used to simulate IoT devices sending environmental data (Ice Thickness and Surface Temperature) to Azure IoT Hub.
 
